@@ -1,0 +1,4 @@
+Rect(0, 0, 400, 400)
+Circle(200, 200, 175, fill=gradient("red", "green", "blue", start="bottom-left"))
+Circle(200, 200, 80)
+
