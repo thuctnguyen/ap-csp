@@ -1,0 +1,11 @@
+# You can add more colors to the list. The code below picks a random color from this list
+# You can pick a particular color by using colors[0] for red, colors[1] for green, etc.
+colors = ['red', 'green', 'cyan', 'yellow', 'gray', 'orange', 'blue', 
+          'lime', 'crimson', 'tomato', 'khaki', 'chartreuse', 'aqua', 'fuchsia']
+gradient_start = ['left', 'right', 'top', 'bottom', 'left-top', 'right-top', 
+                  'left-bottom', 'right-bottom']
+for i in range(10):
+    num_colors = randrange(2,5)
+    picked_colors = [choice(colors) for i in range(num_colors)]
+    Rect(0,0,400,400,fill=gradient(*picked_colors,start=choice(gradient_start)))
+    sleep(1)

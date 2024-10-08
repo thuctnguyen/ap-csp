@@ -1,0 +1,13 @@
+# You can add more colors to the list. The code below picks a random color from this list
+# You can pick a particular color by using colors[0] for red, colors[1] for green, etc.
+colors = ['red', 'green', 'cyan', 'yellow', 'gray', 'orange', 'blue', 
+          'lime', 'crimson', 'tomato', 'khaki', 'chartreuse', 'aqua', 'fuchsia']
+# This is the radius of the starting circle
+radius = 200
+# This is the  center of the starting circle
+start_x = 200
+start_y = 200
+# This loop creates smaller and smaller circles until the radius is less than 0
+while radius > 0:
+  Circle(start_x, start_y, radius, fill=choice(colors))
+  radius = radius - 20

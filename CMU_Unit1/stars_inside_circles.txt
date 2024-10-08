@@ -1,0 +1,28 @@
+# You can add more colors to the list. The code below picks a random color from this list
+# You can pick a particular color by using colors[0] for red, colors[1] for green, etc.
+colors = ['red', 'green', 'cyan', 'yellow', 'gray', 'orange', 'blue', 
+          'lime', 'crimson', 'tomato', 'khaki', 'chartreuse', 'aqua', 'fuchsia']
+# This is how wide the canvas is
+max_width = 400
+# This is how high the canvas is
+max_height = 400
+# This is the radius of each circle
+radius = 50
+# Diameter is just twice the radius
+diameter = radius * 2
+# The starting center of the first circle
+start_x = 50
+start_y = 50
+# This is the number of circles that can fit on a row
+num_circles_per_row = int(max_width / diameter)
+# This is the number of circile
+num_circles_per_column = int(max_height / diameter)
+# This for loop increases the Y value of the center after
+# each row is completed
+for i in range(num_circles_per_column):
+    # This for loop draws circles on a row
+    for i in range(num_circles_per_row):
+      Circle(start_x + i * diameter, start_y, radius, fill=choice(colors))
+      # Each star has a random number of points from 4 to 8
+      Star(start_x + i * diameter, start_y, radius, randrange(4,8), fill=choice(colors))
+    start_y = start_y + diameter
